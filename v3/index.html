@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ten Mile Tutoring — V3 Warm & Playful</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root{--peach:#FFD9C7;--yellow:#FFE9A8;--terracotta:#D96A4A;--cream:#FFF8F2;--text:#3b3129}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial;background:var(--cream);color:var(--text);margin:0}
+    .wrap{max-width:920px;margin:18px auto;padding:16px}
+    .hero{background:linear-gradient(135deg,var(--peach),var(--yellow));padding:22px;border-radius:20px}
+    .hero h1{font-family:'DM Serif Display',serif;font-size:2rem;margin:0}
+    .badge-row{display:flex;gap:8px;margin-top:10px}
+    .badge{background:white;padding:8px 10px;border-radius:16px;font-weight:600}
+    .ctas{margin-top:12px;display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:22px;border:none;cursor:pointer}
+    .primary{background:var(--terracotta);color:#fff}
+    .secondary{background:transparent;border:2px solid rgba(59,49,41,.12);color:var(--text)}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:18px}
+    .card{background:#fff;padding:12px;border-radius:20px;box-shadow:0 8px 18px rgba(0,0,0,.04)}
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:12px;border:1px solid #f0e6de}
+    footer{margin-top:22px;font-size:0.95rem}
+    @media (prefers-reduced-motion:reduce){*{animation:none;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Ten Mile Tutoring</h1>
+      <p style="margin:6px 0 0;">Friendly, confident support for early readers and beyond.</p>
+      <div class="badge-row"><span class="badge">Certified Literacy Specialist</span><span class="badge">Certified Dyslexia Evaluator</span><span class="badge">Local &amp; In Person</span></div>
+      <div class="ctas"><a class="btn primary" href="#contact">Book a Free Consultation</a><a class="btn secondary" href="#services">Explore Services</a></div>
+
+      <!-- playful sun illustration as signature element -->
+      <div style="margin-top:14px;" aria-hidden="true"><svg width="160" height="60" viewBox="0 0 160 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="18" fill="#FFD9C7"/><path d="M60 40 q30 -30 60 0" stroke="#D96A4A" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="card"><h4>Dyslexia Screening &amp; Evaluation</h4><p>Clear, compassionate assessment with family-friendly reports.</p></div>
+      <div class="card"><h4>One-on-One Reading Tutoring</h4><p>Engaging, structured lessons built for steady progress.</p></div>
+      <div class="card"><h4>Parent Guidance &amp; Advocacy</h4><p>Practical next steps for school meetings and classroom supports.</p></div>
+    </section>
+
+    <section id="how" style="margin-top:18px">
+      <h3>The Plan</h3>
+      <ol>
+        <li>Free consult</li>
+        <li>Screening or baseline</li>
+        <li>Lessons tailored to goals</li>
+        <li>Regular check-ins</li>
+      </ol>
+    </section>
+
+    <section id="waitlist" style="margin-top:18px">
+      <h3>Online Courses Coming Soon</h3>
+      <form name="waitlist" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="waitlist">
+        <label>Email <input type="email" name="email" required></label>
+        <button class="btn primary" type="submit">Join Waitlist</button>
+      </form>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h3>Contact</h3>
+      <form name="consultation" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="consultation">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" rows="4"></textarea></label>
+        <button class="btn primary" type="submit">Request Consultation</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Ten Mile Tutoring is not affiliated with any school district.</p>
+    </footer>
+  </main>
+</body>
+</html>

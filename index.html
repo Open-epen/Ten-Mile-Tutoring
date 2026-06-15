@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ten Mile Tutoring — Design Previews</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+  <style>
+    :root{--bg:#f8f8f7;--card:#fff;--muted:#5a5a5a}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Arial;line-height:1.4;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:980px;margin:28px auto;padding:16px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:8px 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(20,20,30,.06);text-align:center}
+    .card a{color:inherit;text-decoration:none;display:block}
+    .card h3{margin:0 0 8px;font-size:1.1rem}
+    .note{margin-top:20px;color:#444;font-size:0.95rem}
+    .foot{margin-top:26px;color:#666;font-size:0.9rem}
+    .card:focus-within{outline:3px solid #cbd5e1}
+    @media (prefers-reduced-motion:reduce){*{animation:none;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div>
+        <h1>Ten Mile Tutoring</h1>
+        <p class="lead">Working design drafts for Michelle — choose a direction to review. Nothing here is purchased yet.</p>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Design previews">
+      <article class="card"><a href="v1/">
+        <h3>V1 — Classic / Bookish</h3>
+        <p>Deep navy, warm gold, serif display. Trusted, traditional.</p>
+      </a></article>
+
+      <article class="card"><a href="v2/">
+        <h3>V2 — Mountain Modern</h3>
+        <p>Spruce and alpenglow coral. Clean, outdoorsy, modern.</p>
+      </a></article>
+
+      <article class="card"><a href="v3/">
+        <h3>V3 — Warm & Playful</h3>
+        <p>Sunrise palette, rounded shapes, friendly and kid-approachable.</p>
+      </a></article>
+    </section>
+
+    <p class="note">Nothing is purchased yet — name, domain, and design are still flexible.</p>
+    <p class="foot">Preview locally: <code>python3 -m http.server 8000</code> and open <em>http://localhost:8000/tenmile-tutoring/</em></p>
+  </main>
+</body>
+</html>

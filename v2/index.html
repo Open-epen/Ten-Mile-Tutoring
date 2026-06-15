@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ten Mile Tutoring — V2 Mountain Modern</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--spruce:#1E3B2F;--snow:#F5F7F4;--coral:#E8806E;--muted:#2a3a35}
+    *{box-sizing:border-box}
+    body{font-family:Figtree,system-ui,Arial;background:var(--snow);color:var(--muted);margin:0}
+    header{background:var(--snow);padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.04)}
+    .wrap{max-width:1080px;margin:18px auto;padding:16px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:44px;height:24px}
+    .hero{background:linear-gradient(180deg,var(--snow) 0%,#fff 60%);padding:26px;border-radius:12px}
+    .hero h1{margin:0;font-size:1.9rem;color:var(--spruce)}
+    .credential{display:flex;gap:8px;margin-top:10px}
+    .credential span{background:var(--snow);padding:6px 10px;border-radius:999px;border:1px solid rgba(30,59,47,.08);font-weight:600}
+    .ctas{margin-top:14px;display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+    .primary{background:var(--spruce);color:#fff}
+    .secondary{background:transparent;border:2px solid var(--spruce);color:var(--spruce)}
+    .ridgeline{margin-top:18px}
+    .services{background:var(--spruce);color:#fff;padding:20px;border-radius:8px;margin-top: -6px}
+    .services .list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+    .services .item{background:transparent;padding:12px}
+    .section{margin-top:20px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    footer{margin-top:26px;font-size:0.95rem;color:#54615b}
+    @media (prefers-reduced-motion:reduce){*{animation:none;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand"><svg class="logo" viewBox="0 0 44 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2 20 L10 8 L18 14 L26 6 L34 12 L42 4" stroke="var(--spruce)" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="26" cy="6" r="2" fill="var(--coral)"/></svg><div><strong>Ten Mile Tutoring</strong><div style="font-size:0.9rem;color:var(--spruce)">Summit County</div></div></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Ten Mile Tutoring — How far your reader has climbed matters.</h1>
+      <div class="credential"><span>Certified Literacy Specialist</span><span>Certified Dyslexia Evaluator</span><span>Local &amp; In Person</span></div>
+      <div class="ctas"><a class="btn primary" href="#contact">Book a Free Consultation</a><a class="btn secondary" href="#services">Explore Services</a></div>
+      <div class="ridgeline" aria-hidden="true">
+        <svg width="100%" height="72" viewBox="0 0 100 72" preserveAspectRatio="none"><path d="M0 60 L10 30 L22 40 L35 20 L50 50 L65 24 L78 40 L90 18 L100 60" fill="none" stroke="var(--spruce)" stroke-width="6" stroke-linejoin="round"/></svg>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="list">
+        <div class="item"><h4>Dyslexia Screening &amp; Evaluation</h4><p>Comprehensive, evidence-based—clear next steps for school and home.</p></div>
+        <div class="item"><h4>One-on-One Reading Tutoring</h4><p>Structured sessions focused on skill-building and fluency.</p></div>
+        <div class="item"><h4>Parent Guidance &amp; Advocacy</h4><p>Practical support for plan meetings and accommodations.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <h3>The Trail Map</h3>
+      <ol>
+        <li>Free consult to learn goals.</li>
+        <li>Screening and plan.</li>
+        <li>Targeted tutoring.</li>
+        <li>Progress check-ins and school coordination.</li>
+      </ol>
+    </section>
+
+    <section id="waitlist" class="section">
+      <h3>Online Courses Coming Soon</h3>
+      <form name="waitlist" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="waitlist">
+        <label>Email <input type="email" name="email" required></label>
+        <button class="btn primary" type="submit">Join Waitlist</button>
+      </form>
+    </section>
+
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <form name="consultation" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="consultation">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" rows="4"></textarea></label>
+        <button class="btn primary" type="submit">Request Consultation</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Ten Mile Tutoring is not affiliated with any school district.</p>
+    </footer>
+  </main>
+</body>
+</html>
