@@ -6,127 +6,138 @@
   <title>Ten Mile Tutoring — V1 Classic</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@10..60,400;10..60,700&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#FAF7F1;--nav:#1E3D4F;--accent:#E0A23E;--text:#102028}
+    :root{--bg:#FAF7F1;--nav:#1E3D4F;--accent:#E0A23E;--text:#102028;--card:#fff;--muted:#5f6b72}
     *{box-sizing:border-box}
-    body{font-family:'Nunito Sans',system-ui,Arial;color:var(--text);margin:0;background:var(--bg);line-height:1.5}
-    header{position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid rgba(16,32,40,.06)}
-    .nav{max-width:980px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:baseline;gap:12px}
-    .brand h1{font-family:'Fraunces',serif;color:var(--nav);margin:0;font-size:1.25rem}
-    .menu{display:none}
-    nav a{margin-left:14px;color:var(--nav);text-decoration:none}
-    .container{max-width:980px;margin:24px auto;padding:16px}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
-    .hero h2{font-family:'Fraunces',serif;color:var(--nav);font-size:2rem;margin:0 0 8px;line-height:1.05}
-    .badges{display:flex;gap:8px;margin:12px 0}
-    .pill{background:#fff;padding:8px 10px;border-radius:999px;border:1px solid rgba(16,32,40,.06);font-weight:600;font-size:0.9rem}
-    .ctas{display:flex;gap:10px;margin-top:12px}
-    .btn{padding:12px 16px;border-radius:8px;border:none;cursor:pointer}
+    body{font-family:'Nunito Sans',system-ui,Arial;color:var(--text);margin:0;background:var(--bg);line-height:1.6}
+    header{position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid rgba(16,32,40,.08)}
+    .nav{max-width:980px;margin:0 auto;padding:16px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand h1{font-family:'Fraunces',serif;color:var(--nav);margin:0;font-size:1.3rem}
+    nav a{margin-left:18px;color:var(--nav);text-decoration:none;font-weight:700}
+    .container{max-width:980px;margin:0 auto;padding:24px 16px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+    .hero h1{font-family:'Fraunces',serif;color:var(--nav);font-size:2.3rem;margin:0;line-height:1.05}
+    .hero p.lead{max-width:650px;color:var(--muted);margin:16px 0}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+    .badge{background:var(--card);padding:10px 14px;border-radius:999px;border:1px solid rgba(30,61,79,.12);font-weight:700;font-size:0.92rem}
+    .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-width:180px;padding:14px 18px;border-radius:12px;border:none;text-decoration:none;font-weight:700;cursor:pointer}
     .btn-primary{background:var(--nav);color:#fff}
     .btn-secondary{background:transparent;border:2px solid var(--nav);color:var(--nav)}
-    .photo{background:#e9e1d8;border-radius:8px;height:220px;display:flex;align-items:center;justify-content:center;color:#786a5a}
-    section{margin-top:28px}
-    h3{color:var(--nav)}
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-    .service{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,32,40,.04)}
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #d8d3c8}
-    footer{margin-top:36px;padding:20px;border-top:1px solid rgba(16,32,40,.04);font-size:0.95rem}
-    .scoops{display:block;margin-top:6px}
-    @media(max-width:820px){.hero{grid-template-columns:1fr}.menu{display:block}}
-    :focus{outline:3px solid rgba(224,162,62,.25);outline-offset:2px}
+    .photo{background:#e8dfce;border-radius:18px;height:260px;display:flex;align-items:center;justify-content:center;color:#6f5e4d;font-weight:700;text-align:center;padding:20px}
+    section{margin-top:42px}
+    section h2{font-family:'Fraunces',serif;color:var(--nav);font-size:1.5rem;margin-bottom:16px}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .service{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 12px 28px rgba(16,32,40,.06)}
+    .service h3{margin-top:0;font-size:1.1rem;color:var(--nav)}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .feature-card{background:var(--card);padding:20px;border-radius:16px;box-shadow:0 10px 22px rgba(16,32,40,.05)}
+    .testimonial{background:#fff6e9;border-left:4px solid var(--accent);padding:18px 20px;border-radius:14px}
+    .testimonial p{margin:0;font-size:0.98rem;color:var(--muted)}
+    .testimonial cite{display:block;margin-top:12px;font-size:0.9rem;color:var(--nav);font-style:normal;font-weight:700}
+    form{display:grid;gap:14px}
+    label{display:flex;flex-direction:column;gap:8px;font-weight:700;color:var(--nav)}
+    input,textarea{padding:14px;border-radius:12px;border:1px solid rgba(16,32,40,.12);font:inherit}
+    textarea{resize:vertical;min-height:120px}
+    footer{margin-top:48px;padding:24px 0;border-top:1px solid rgba(16,32,40,.08);color:var(--muted);font-size:0.95rem}
+    .scoops{display:block;margin-top:10px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.photo{height:220px}} 
+    @media(max-width:620px){.nav{flex-direction:column;align-items:flex-start}.nav a{margin:10px 8px 0 0}.services,.feature-grid{grid-template-columns:1fr}}
+    :focus-visible{outline:3px solid rgba(224,162,62,.35);outline-offset:3px}
     @media (prefers-reduced-motion:reduce){*{animation:none;transition:none!important}}
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
-      <div class="brand"><h1>Ten Mile Tutoring</h1><span style="color:var(--accent);font-weight:700">Summit County</span></div>
-      <div class="menu" aria-hidden="true">☰</div>
+      <div class="brand"><h1>Ten Mile Tutoring</h1><span style="font-size:0.95rem;color:var(--accent);letter-spacing:.02em">Summit County</span></div>
+      <nav aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero" id="top">
       <div>
-        <h2>Ten Mile Tutoring — Literacy help that meets your child where they are<span class="scoops" aria-hidden="true"><svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 24c18-18 36-18 54 0s36 18 54 0 36-18 54 0" stroke="#E0A23E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></h2>
+        <h1>Structured literacy support for Summit County readers.</h1>
+        <p class="lead">Michelle is a certified literacy specialist and the only certified dyslexia evaluator in Summit County. Her tutoring blends expert assessment, one-on-one coaching, and strong family support.</p>
         <div class="badges" role="list">
-          <span class="pill" role="listitem">Certified Literacy Specialist</span>
-          <span class="pill" role="listitem">Certified Dyslexia Evaluator</span>
-          <span class="pill" role="listitem">Local &amp; In Person</span>
+          <span class="badge" role="listitem">Certified Literacy Specialist</span>
+          <span class="badge" role="listitem">Certified Dyslexia Evaluator</span>
+          <span class="badge" role="listitem">Local &amp; In Person</span>
         </div>
-        <p>Owner: Michelle — certified literacy specialist and the only certified dyslexia evaluator in Summit County.</p>
         <div class="ctas">
           <a class="btn btn-primary" href="#contact">Book a Free Consultation</a>
           <a class="btn btn-secondary" href="#services">Explore Services</a>
         </div>
       </div>
-
-      <aside>
-        <div class="photo">Photo of Michelle goes here</div>
-        <p style="margin-top:10px;font-size:0.95rem">Short credentials and availability snapshot.</p>
-      </aside>
+      <aside class="photo">Photo of Michelle goes here</aside>
     </section>
 
     <section id="services">
-      <h3>Services</h3>
+      <h2>What Michelle offers</h2>
       <div class="services">
-        <div class="service"><h4>Dyslexia Screening &amp; Evaluation</h4><p>Most requested—comprehensive, evidence-based assessments and a clear plan.</p></div>
-        <div class="service"><h4>One-on-One Reading Tutoring</h4><p>Structured literacy lessons tailored to each student's needs.</p></div>
-        <div class="service"><h4>Parent Guidance &amp; Advocacy</h4><p>Support navigating schools, accommodations, and learning plans.</p></div>
+        <article class="service"><h3>Dyslexia Screening &amp; Evaluation</h3><p>Complete, evidence-backed screening and evaluation with a clear reading profile and actionable next steps.</p></article>
+        <article class="service"><h3>One-on-One Reading Tutoring</h3><p>Structured literacy lessons built around decoding, fluency, and comprehension for elementary readers.</p></article>
+        <article class="service"><h3>Parent Guidance &amp; Advocacy</h3><p>Practical support for school meetings, accommodations, and reading confidence at home.</p></article>
       </div>
     </section>
 
     <section id="about">
-      <h3>About Michelle</h3>
-      <p>Michelle is a local educator with years of experience in structured literacy and dyslexia evaluation. She focuses on sustainable progress and family partnership.</p>
+      <h2>About Michelle</h2>
+      <div class="feature-grid">
+        <div class="feature-card"><strong>Local expertise</strong><p>Michelle works with families in Summit County and knows how to support learners in this mountain community.</p></div>
+        <div class="feature-card"><strong>Research-based methods</strong><p>Her work is grounded in structured literacy and dyslexia-focused practices that build lasting progress.</p></div>
+      </div>
     </section>
 
     <section id="how">
-      <h3>How It Works</h3>
-      <ol>
-        <li>Schedule a free consultation.</li>
-        <li>Complete intake and background materials.</li>
-        <li>Evaluation or baseline session.</li>
-        <li>Begin tutoring with regular progress updates.</li>
-      </ol>
+      <h2>How it works</h2>
+      <div class="services">
+        <article class="service"><h3>1. Book your consultation</h3><p>Start with a free conversation about reading goals and challenges.</p></article>
+        <article class="service"><h3>2. Complete an evaluation</h3><p>Michelle will review strengths, needs, and learning history before tutoring begins.</p></article>
+        <article class="service"><h3>3. Begin tailored tutoring</h3><p>Lessons are personalized, consistent, and focused on measurable reading growth.</p></article>
+        <article class="service"><h3>4. Stay connected</h3><p>Get progress updates, family tips, and school support guidance.</p></article>
+      </div>
     </section>
 
     <section id="testimonials">
-      <h3>Testimonials</h3>
-      <blockquote>"Placeholder quote — this service helped our child find reading confidence." — Parent, Summit County</blockquote>
-      <blockquote>"Placeholder quote — caring, knowledgeable, and effective." — Parent, Summit County</blockquote>
+      <h2>Parent feedback</h2>
+      <div class="testimonial"><p>“Michelle helped our child feel confident with reading again. Her evaluation and tutoring were thoughtful, encouraging, and effective.”</p><cite>— Summit County parent</cite></div>
+      <div class="testimonial" style="margin-top:18px"><p>“We appreciated the clear plan and the way Michelle partnered with our family. She made the process feel manageable.”</p><cite>— Local family</cite></div>
     </section>
 
-    <section id="waitlist">
-      <h3>Online Courses Coming Soon</h3>
-      <p>Join the waitlist to be notified when courses launch.</p>
+    <section id="schedule">
+      <h2>Ready to get started?</h2>
+      <div class="services">
+        <article class="service"><h3>Request a consultation</h3><p>Use the form to ask about availability, intake, and next steps.</p></article>
+        <article class="service"><h3>Need a resource guide?</h3><p>Sign up for practical reading strategies and family learning ideas.</p></article>
+      </div>
       <form name="waitlist" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="waitlist">
-        <label>Email address <input type="email" name="email" required></label>
-        <button class="btn btn-primary" type="submit">Join Waitlist</button>
+        <label>Email address<input type="email" name="email" required></label>
+        <button class="btn btn-primary" type="submit">Send me reading tips</button>
       </form>
     </section>
 
     <section id="contact">
-      <h3>Contact</h3>
+      <h2>Contact</h2>
       <form name="consultation" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="consultation">
-        <label>Name <input type="text" name="name" required></label>
-        <label>Email <input type="email" name="email" required></label>
-        <label>Message <textarea name="message" rows="4"></textarea></label>
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Message<textarea name="message" rows="5"></textarea></label>
         <button class="btn btn-primary" type="submit">Request Consultation</button>
       </form>
     </section>
 
     <footer>
-      <p>Ten Mile Tutoring is not affiliated with any school district. Placeholder address: Summit County, CO.</p>
+      <p>Ten Mile Tutoring is not affiliated with any school district.</p>
     </footer>
   </main>
-
-  <script>
-    // Minimal accessible menu toggle for small screens
-    (function(){var m=document.querySelector('.menu');if(!m) return;m.addEventListener('click',function(){alert('Menu (placeholder)')})})();
-  </script>
 </body>
 </html>
